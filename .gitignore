@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# 环境变量与密钥
+.env
+.env.*
+!.env.example
+
+# 数据库与上传文件
+*.db
+*.db-shm
+*.db-wal
+uploads/
+
+# 依赖与编译产物
+node_modules/
+bin/
+obj/
+dist/
