@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net10.0": {
+      "Dapper": {
+        "type": "Direct",
+        "requested": "[2.1.66, )",
+        "resolved": "2.1.66",
+        "contentHash": "/q77jUgDOS+bzkmk3Vy9SiWMaetTw+NOoPAV0xPBsGVAyljd5S6P+4RUW7R3ZUGGr9lDRyPKgAMj2UAOwvqZYw=="
+      },
+      "HtmlSanitizer": {
+        "type": "Direct",
+        "requested": "[9.2.1039, )",
+        "resolved": "9.2.1039",
+        "contentHash": "PKxy1hYknAij8YlHCC2a9GSqzUd4bh3IvY+abJBvOH1FKcZpbyafEHtdFcXQBt12Y7hNPkNEOP6Qa7uKNSs/yA==",
+        "dependencies": {
+          "AngleSharp": "1.7.2",
+          "AngleSharp.Css": "1.0.2"
+        }
+      },
+      "MySqlConnector": {
+        "type": "Direct",
+        "requested": "[2.6.2, )",
+        "resolved": "2.6.2",
+        "contentHash": "dlTc/tsBa42szdvpj4nrHvQVUb0gsMwR9HT6J0Zz2OSqfP0CdYlGw+qQPqCpbnO97idfvclSjKYtM6y5QaBQaQ=="
+      },
+      "AngleSharp": {
+        "type": "Transitive",
+        "resolved": "1.7.2",
+        "contentHash": "r1rb5Qo/0KPzmP0nbSiXPDVfh4Ctu0B+y1RyyUq73g4sgAmEW7q10RDyTq2ZsILwtO9O2LAvMrUles7eD4zz1g=="
+      },
+      "AngleSharp.Css": {
+        "type": "Transitive",
+        "resolved": "1.0.2",
+        "contentHash": "XeBxh0h/73+MWFsGfeMwiK7xbzAK3YeHFdUIrMH1P90amIrDFD/vUDIrPlF3CixqaMH5MRIUvT6Ux+2zvhJ3SA==",
+        "dependencies": {
+          "AngleSharp": "[1.5.0, 2.0.0)"
+        }
+      }
+    }
+  }
+}

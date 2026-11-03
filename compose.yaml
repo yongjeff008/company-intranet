@@ -1,0 +1,23 @@
+name: company-intranet
+services:
+  mysql:
+    image: mysql:8.4
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:3308:3306"
+    environment:
+      MYSQL_DATABASE: intranet
+      MYSQL_USER: intranet
+      MYSQL_PASSWORD: ${CMS_DB_PASSWORD:?Run scripts/setup.sh first}
+      MYSQL_ROOT_PASSWORD: ${CMS_DB_ROOT_PASSWORD:?Run scripts/setup.sh first}
+    command: ["--innodb-buffer-pool-size=64M", "--performance-schema=OFF", "--max-connections=50", "--mysqlx=OFF", "--character-set-server=utf8mb4", "--collation-server=utf8mb4_0900_ai_ci"]
+    mem_limit: 512m
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "MYSQL_PWD=$$MYSQL_PASSWORD mysql -h 127.0.0.1 -u intranet -D intranet -e 'SELECT 1' >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+volumes:
+  mysql-data:
